@@ -1,0 +1,12 @@
+@@ -226,11 +226,8 @@ function ConfigManager:GetShopGoodsInfo(levelCardGroupId, goodsType, goodsId)
+    if goodsType == 1 then
+        --临时
+        local groupCfg = self.shopCfg_raw['CardGroup'][levelCardGroupIdStr]
+        print("groupCfg=====", table.dump(groupCfg))
+        if (groupCfg) then
+            print("groupCfg", goodsIdStr)
+            local goods = groupCfg['ItemId'][goodsIdStr]
+            print("goods=====", table.dump(goods))
+            data = goods
+        end
+    elseif goodsType == 2 then
